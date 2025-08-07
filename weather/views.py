@@ -32,5 +32,5 @@ def index(request):
             data = {"error": f"HTTP Error {e.code}: {e.reason}"}
         except Exception as e:
             data = {"error": str(e)}
-
+   
     return render(request, 'index.html', {'city': city, 'data': data})
